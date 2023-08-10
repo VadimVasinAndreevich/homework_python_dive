@@ -19,6 +19,5 @@ def string_in_tuple(func_str):
 
 
 res = string_in_tuple(operation_str)
-for el in res:
-    print(el)
+print(*res)
 
