@@ -12,4 +12,4 @@ def fib(x=0, y=1):
 
 
 res = fib()
-print([el for el in res])
+print(*res)
