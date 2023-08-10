@@ -15,6 +15,5 @@ def dictionary_from_list(list_n, list_s, list_a):
 
 
 res = dictionary_from_list(names, salaries, awards)
-for el in res:
-    print(el)
+print(*res)
 
