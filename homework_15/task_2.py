@@ -79,7 +79,7 @@ class Factorie:
             return "maybe it's not animal"
 
 
-def operation_param(*args):
+def operation_param(type_x, *args):
     args = list(args)
     iter_str = 'QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm. '
     for el in range(len(args)):
@@ -95,12 +95,12 @@ def operation_param(*args):
             args[el] = True
         elif args[el] == 'False':
             args[el] = False
-    obj_animal = Fish(None, None, None, None)
-    obj_one = Factorie(type(obj_animal), args[0], args[1], args[2], args[3])
+    obj_one = Factorie(type_x, args[0], args[1], args[2], args[3])
     return obj_one.print_info()
 
 
 parser = argparse.ArgumentParser(description='My first argument parser')
 parser.add_argument('param', metavar='a b c', nargs='*', help='enter a b c separated by a space')
 args = parser.parse_args()
-print(operation_param(*args.param))
+obj_animal = Fish(None, None, None, None)
+print(operation_param(type(obj_animal), *args.param))
